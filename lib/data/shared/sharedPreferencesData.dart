@@ -56,8 +56,16 @@ void setMobileLogin() async {
   prefs.setString('login', 'OK');
 }
 
+void setMobileLogout() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.setString('login', '');
+  prefs.setString('user_code', '');
+  prefs.setString('user_name', '');
+}
+
 void setMobileLoginIdPwd(String user_code,String user_name) async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   prefs.setString('user_code', user_code);
   prefs.setString('user_name', user_name);
 }
+
