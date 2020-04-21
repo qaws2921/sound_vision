@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:soundvision/data/shared/sharedPreferencesData.dart';
 import 'package:soundvision/screen/home/Home.dart';
 import 'package:soundvision/screen/key/Key.dart';
 import 'package:soundvision/screen/landing/Landing.dart';
 import 'package:soundvision/screen/login/Login.dart';
+import 'package:flutter/services.dart';
 
 
 //Future<void> main() async {
@@ -19,7 +21,9 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return MaterialApp(
+      localizationsDelegates: [ GlobalMaterialLocalizations.delegate, GlobalWidgetsLocalizations.delegate, ], supportedLocales: [ const Locale('en', 'US'), const Locale('ko', 'KO'), ],
       debugShowCheckedModeBanner: false,
       title: 'Login Demo',
       routes: {
@@ -30,7 +34,8 @@ class MyApp extends StatelessWidget {
       },
       theme: ThemeData(
           primaryColor: Colors.black,
-          accentColor: Colors.black
+          accentColor: Colors.black,
+          buttonColor: Colors.black,
       ),
     );
   }
