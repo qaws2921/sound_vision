@@ -165,7 +165,7 @@ class _POPPlanState extends State<POPPlan> {
                     child: Text(
                       "2020-04-20",
                       style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height * 0.017),
+                          fontSize: MediaQuery.of(context).size.width * 0.027),
                     )),
                 Container(
                     padding: EdgeInsets.only(
@@ -174,7 +174,7 @@ class _POPPlanState extends State<POPPlan> {
                     child: Text("절단",
                         style: TextStyle(
                             fontSize:
-                            MediaQuery.of(context).size.height * 0.017))),
+                            MediaQuery.of(context).size.width * 0.027))),
                 Container(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).size.height * 0.015),
@@ -182,7 +182,7 @@ class _POPPlanState extends State<POPPlan> {
                     child: Text("스마트 샘플",
                         style: TextStyle(
                             fontSize:
-                            MediaQuery.of(context).size.height * 0.017))),
+                            MediaQuery.of(context).size.width * 0.027))),
 
               ],
             ),
@@ -205,7 +205,7 @@ class _POPPlanState extends State<POPPlan> {
                     child: Text("문짝",
                         style: TextStyle(
                             fontSize:
-                            MediaQuery.of(context).size.height * 0.017))),
+                            MediaQuery.of(context).size.width * 0.027))),
                 Container(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).size.height * 0.015),
@@ -213,7 +213,7 @@ class _POPPlanState extends State<POPPlan> {
                     child: Text("양개 민짜",
                         style: TextStyle(
                             fontSize:
-                            MediaQuery.of(context).size.height * 0.017))),
+                            MediaQuery.of(context).size.width * 0.027))),
                 Container(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).size.height * 0.015),
@@ -221,7 +221,7 @@ class _POPPlanState extends State<POPPlan> {
                     child: Text("2020-04-20 12:00",
                         style: TextStyle(
                             fontSize:
-                            MediaQuery.of(context).size.height * 0.017))),
+                            MediaQuery.of(context).size.width * 0.027))),
               ],
             ),
             Row(
@@ -240,16 +240,16 @@ class _POPPlanState extends State<POPPlan> {
                     child: Text("양개 1 EA",
                         style: TextStyle(
                             fontSize:
-                            MediaQuery.of(context).size.height * 0.017))),
+                            MediaQuery.of(context).size.width * 0.027))),
 
                 Container(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).size.height * 0.015),
-                    width: MediaQuery.of(context).size.width * 0.23,
+                    width: MediaQuery.of(context).size.width * 0.24,
                     child: Text("2020-04-20 12:00",
                         style: TextStyle(
                             fontSize:
-                            MediaQuery.of(context).size.height * 0.017))),
+                            MediaQuery.of(context).size.width * 0.027))),
               ],
             ),
           ],
@@ -295,7 +295,7 @@ class _POPPlanState extends State<POPPlan> {
   List dataLine = List(); //edited line
 
   Future<String> getSWData() async {
-    String url = 'http://192.168.1.5:9001/mobileLine';
+    String url = 'http://soundvision.smart-tobe.co.kr:19823/mobileLine';
 
     final response = await http.post(url,
         headers: {HttpHeaders.contentTypeHeader: 'application/json'},
@@ -448,13 +448,13 @@ class _POPPlanState extends State<POPPlan> {
                                 icon: new Icon(
                                   Icons.date_range,
                                   size:
-                                      MediaQuery.of(context).size.height * 0.04,
+                                      MediaQuery.of(context).size.width * 0.06,
                                   color: Colors.grey,
                                 ),
                               ),
                               style: new TextStyle(
                                 fontSize:
-                                    MediaQuery.of(context).size.height * 0.028,
+                                    MediaQuery.of(context).size.width * 0.04,
                               ),
                             ),
                           ),
@@ -486,9 +486,10 @@ class _POPPlanState extends State<POPPlan> {
                             },
                             style: TextStyle(
                                 fontSize:
-                                    MediaQuery.of(context).size.height * 0.020,
+                                    MediaQuery.of(context).size.width * 0.04,
+
                                 color: Colors.black),
-                            iconSize: MediaQuery.of(context).size.height * 0.05,
+                            iconSize: MediaQuery.of(context).size.width * 0.07,
                           ),
                         ),
                       )
@@ -578,7 +579,7 @@ txtStyle_13(String content, context) {
     content,
     textAlign: TextAlign.center,
     style: TextStyle(
-        fontSize: MediaQuery.of(context).size.height * 0.03,
+        fontSize: MediaQuery.of(context).size.width * 0.06,
         fontWeight: FontWeight.bold),
   );
 }

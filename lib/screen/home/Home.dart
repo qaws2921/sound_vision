@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:soundvision/data/shared/sharedPreferencesData.dart';
+import 'package:soundvision/screen/TEST/test.dart';
 import 'package:soundvision/screen/popPlan/popPlan.dart';
 
 class Home extends StatefulWidget {
@@ -93,33 +94,39 @@ class _HomeState extends State<Home> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black)
-                  ),
-                  child: Column(
-                    children: <Widget>[
-                      CircleAvatar(
-                        backgroundColor: Colors.transparent,
-                        radius: MediaQuery.of(context).size.width*0.08,
-                        child: Image.asset('assets/logo/logo.png'),
-                      ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height*0.05,
-                        child: RaisedButton(
-
-                          child: Text("생산진행",
-                              style: TextStyle(
-                                fontSize: MediaQuery.of(context).size.width*0.04,
-                              )),
-                          color: Colors.black,
-                          textColor: Colors.white,
-                          disabledColor: Colors.black,
-                          disabledTextColor: Colors.white,
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Test()));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black)
+                    ),
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          backgroundColor: Colors.transparent,
+                          radius: MediaQuery.of(context).size.width*0.08,
+                          child: Image.asset('assets/logo/logo.png'),
                         ),
-                      )
-                    ],
-                  ) ,
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height*0.05,
+                          child: RaisedButton(
+
+                            child: Text("생산진행",
+                                style: TextStyle(
+                                  fontSize: MediaQuery.of(context).size.width*0.04,
+                                )),
+                            color: Colors.black,
+                            textColor: Colors.white,
+                            disabledColor: Colors.black,
+                            disabledTextColor: Colors.white,
+                          ),
+                        )
+                      ],
+                    ) ,
+                  ),
                 ),
 
               ],

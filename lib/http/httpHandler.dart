@@ -8,7 +8,7 @@ import 'package:soundvision/data/shared/sharedPreferencesData.dart';
 // AppCertified {App Key 인증}
 Future<int> AppCertified(String idx) async {
 
-  String url = 'http://192.168.1.5:9001/mobileKey';
+  String url = 'http://soundvision.smart-tobe.co.kr:19823/mobileKey';
   print(idx);
   final response = await http.post(url,
       headers: {HttpHeaders.contentTypeHeader: 'application/json'},
@@ -38,7 +38,7 @@ Future<int> AppCertified(String idx) async {
 
 Future<String> loginHttp(String id,String pw) async {
 
-  String url = 'http://192.168.1.5:9001/mobileLogin';
+  String url = 'http://soundvision.smart-tobe.co.kr:19823/mobileLogin';
 
   final response = await http.post(url,
       headers: {HttpHeaders.contentTypeHeader: 'application/json'},

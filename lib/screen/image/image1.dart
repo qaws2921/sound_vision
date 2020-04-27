@@ -18,6 +18,7 @@ class _Image1State extends State<Image1> {
       margin: EdgeInsets.only(left: 10, right: 10),
       child: Center(
         child: Column(
+
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -34,7 +35,7 @@ class _Image1State extends State<Image1> {
                     },
                     child: Text("이전화면",
                       style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height * 0.02,
+                          fontSize: MediaQuery.of(context).size.width * 0.035,
                           fontWeight: FontWeight.bold),),
                   ),
                 ),
@@ -49,23 +50,27 @@ class _Image1State extends State<Image1> {
                     child: Text(
                       "다음화면",
                       style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height * 0.02,
+                          fontSize: MediaQuery.of(context).size.width * 0.035,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
                 )
               ],
             ),
+
+
+
             Container(
               margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
               width: MediaQuery.of(context).size.width * 1,
-              height: MediaQuery.of(context).size.height * 0.9,
+              height: MediaQuery.of(context).size.height * 0.85,
               child: AspectRatio(
                 aspectRatio: 16 / 9,
                 child: ClipRect(
 
                   child: PhotoView(
-
+                    filterQuality:FilterQuality.high,
+                      basePosition: Alignment.topCenter,
                     imageProvider: AssetImage("assets/image/testimage1.jpg"),
                     minScale: PhotoViewComputedScale.contained * 1.01,
                     // Covered = the smallest possible size to fit the whole screen
